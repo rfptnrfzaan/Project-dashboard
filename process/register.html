@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <nav class="flex flex-row p-4 backdrop-blur-md shadow-md w-full items-center fixed mx-auto justify-around">
+        <div id="logo" class="flex flex-row list-none space-x-6">
+            <li class="text-black">sign in</li>
+            <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">Register</button>
+        </div>
+    
+        <div class="flex flex-row list-none space-x-6">
+            <li class="text-black">Home</li>
+            <li class="text-black"><h1>about</h1></li>
+            <li class="text-black">Help</li>
+        </div>
+    </nav>
+    <!--End-->
+    
+    <!--reg-->
+    <section id="logreg" class=" h-screen p-6 pb-10 flex flex-row">
+        <div class="w-1/2 mt-32 flex flex-col ">
+            <h1 class="text-2xl font-medium mb-2">Registration</h1>
+        <form class="rounded p-6 shadow-lg">
+          <label class="block mb-2">
+            <span class="text-gray-700">Nama</span>
+            <input class="border p-2 w-full" type="text" placeholder="Enter your username">
+          </label>
+          <label class="block mb-2">
+            <span class="text-gray-700">Email</span>
+            <input class="border p-2 w-full" type="email" placeholder="Enter your email">
+          </label>
+          <label class="block mb-2">
+            <span class="text-gray-700">Password</span>
+            <input class="border p-2 w-full" type="password" placeholder="Enter your password">
+          </label>
+          <label class="block mb-2">
+            <span class="text-gray-700">Confirm Password</span>
+            <input class="border p-2 w-full" type="password" placeholder="Confirm your password">
+          </label>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white p-2 rounded-lg">Register</button>
+        </form>
+          </div>
+        <img src="../assets/img/astroboy.png" class="h-1/2 mt-48 ml-48" alt="mindmap">
+    </section>
+    <!--End-->
+</body>
+</html>
