@@ -10,5 +10,9 @@
 ![image](https://user-images.githubusercontent.com/88066176/215757727-f1f2a3a2-4635-4e33-862c-73f31891f7d9.png)
 
 # Dashboard Page Guest
-![image](https://user-images.githubusercontent.com/88066176/215757891-cd31ee21-2bad-4bca-bc65-4d48faf4639c.png)
-![image](https://user-images.githubusercontent.com/88066176/215758038-4962b494-7274-4cac-b31b-06bf4a9604e5.png)
+![image](https://user-images.githubusercontent.com/88066176/215969972-f37ca21e-9d99-479d-ae6e-5cfdf5acee0a.png)
+![image](https://user-images.githubusercontent.com/88066176/215970001-b49dd65b-e1eb-4989-ba2a-fb90de90d239.png)
+![image](https://user-images.githubusercontent.com/88066176/215970018-e806ce82-e52e-4015-a1e9-18c1dd2b8634.png)
+![image](https://user-images.githubusercontent.com/88066176/215970069-7c2b071f-e74a-4982-a457-d7b6b6160b99.png)
+![image](https://user-images.githubusercontent.com/88066176/215970087-b111d9e9-7831-492e-ba81-b0a493011d72.png)
+
