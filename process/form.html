@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+      *{
+        font-family: 'Staatliches', cursive;
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- page -->
+    <main class="h-screen w-screen text-gray-700" x-data="layout">
+        <!-- header page -->
+        <header class="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2">
+            <!-- logo -->
+            <div class="flex items-center space-x-2">
+                <button type="button" class="text-3xl" @click="asideOpen = !asideOpen"><i class="bx bx-menu"></i></button>
+            </div>
+
+            <!-- button profile -->
+            <div class="flex list-none items-end justify-end">
+              <li class="text-black">Homepage</li>
+            </div>
+            <div>
+                <button type="button" @click="profileOpen = !profileOpen" @click.outside="profileOpen = false" class="w-10 h-10 overflow-hidden rounded-full">
+                    <img src="../assets/img/5927577.jpg" alt="plchldr.co" />
+                </button>
+
+                <!-- dropdown profile -->
+                <div class="absolute right-2 mt-1 w-48 divide-y divide-gray-200 rounded-md border border-gray-200 bg-white shadow-md" x-show="profileOpen" x-transition>
+
+                    <div class="flex flex-col space-y-3 p-2">
+                        <a href="#" class="transition hover:text-blue-600">Edit Profile</a>
+                    </div>
+
+                    <div class="p-2">
+                        <button class="flex items-center space-x-2 transition hover:text-blue-600">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                </path>
+                            </svg>
+                            <div><a href="login.html">Log Out</a></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex">
+            <!-- aside -->
+            <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh"
+                x-show="asideOpen">
+                <a href="../admin/index.html" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+                    <span class="text-2xl"><i class="bx bx-home"></i></span>
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="flex flex-row items-center h-8">
+                    <div class="text-sm font-light tracking-wide text-gray-500">Menu</div>
+                </div>
+
+                <a href="../admin/siswa.html" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+                    <span class="text-2xl"><i class="bx bxs-backpack"></i></span>
+                    <span>Siswa</span>
+                </a>
+
+                <a href="../admin/guru.html" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600">
+                    <span class="text-2xl"><i class="bx bx-briefcase-alt"></i></span>
+                    <span>Guru</span>
+                </a>
+            </aside>
+
+            <!-- main content page -->
+            <div class="flex w-screen p-7 items-start bg-white">
+                <div class="mx-auto w-full">
+                  <h1 class="text-4xl font-medium">Edit Biodata</h1>
+        
+                  <form action="../admin/index.html" class="mt-10">
+                    <div class="grid gap-6 sm:grid-cols-2">
+                      <div class="relative z-0">
+                        <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+                        <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Nama</label>
+                      </div>
+                      <div class="relative z-0">
+                        <input type="email" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+                        <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Email</label>
+                      </div>
+                      <div class="relative z-0 col-span-2">
+                        <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+                        <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">NISN/NIP/NIK </label>
+                      </div>
+                    </div>
+                    <h1 class="mt-2 font-semibold text-1xl">Status</h1>
+                    <div class="main flex overflow-hidden select-none">
+                        
+                        <label class="flex radio p-2 cursor-pointer">
+                          <input class="my-auto transform scale-125" type="radio" name="sfg" />
+                          <div class="title px-2">Karyawan</div>
+                        </label>
+                      
+                        <label class="flex radio p-2 cursor-pointer">
+                          <input class="my-auto transform scale-125" type="radio" name="sfg" />
+                          <div class="title px-2">Siswa</div>
+                        </label>
+                      
+                        <label class="flex radio p-2 cursor-pointer">
+                          <input class="my-auto transform scale-125" type="radio" name="sfg" />
+                          <div class="title px-2">Guru</div>
+                        </label>
+                      </div>
+                    <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white">Simpan</button>
+                  </form>
+                </div>
+              </div>
+        </div>
+    </main>
+
+        <script>
+            document.addEventListener("alpine:init", () => {
+                Alpine.data("layout", () => ({
+                    profileOpen: false,
+                    asideOpen: true,
+                }));
+            });
+        </script>
+    </body>
+</html>
